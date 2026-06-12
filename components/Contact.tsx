@@ -110,6 +110,31 @@ export default function Contact() {
               </span>
             </div>
           </div>
+
+          <div className="group mt-6 overflow-hidden rounded-2xl border border-white/10 bg-charcoal/60 shadow-card">
+            <div className="flex items-center justify-between border-b border-white/10 bg-ink-800/70 px-5 py-3">
+              <span className="flex items-center gap-2 font-display text-sm font-semibold uppercase tracking-[0.18em] text-white">
+                <MapPin className="h-4 w-4 text-brand" />
+                Service Area Map
+              </span>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Volusia+County%2C+Florida"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-semibold uppercase tracking-wider text-steel transition-colors hover:text-brand"
+              >
+                Open in Maps
+              </a>
+            </div>
+            <iframe
+              title="Mike The Mechanic service area map — Volusia County, Florida"
+              src="https://maps.google.com/maps?q=Volusia%20County%2C%20Florida&z=9&output=embed"
+              className="h-64 w-full border-0 grayscale-[0.25] transition-all duration-500 group-hover:grayscale-0 sm:h-72"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
         </Reveal>
 
         {/* Form column */}

@@ -21,7 +21,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative isolate overflow-hidden bg-ink-900 pt-28 sm:pt-32 lg:pt-40"
+      className="relative isolate overflow-hidden bg-ink-900 pt-40 sm:pt-48 lg:pt-52"
     >
       {/* Background layers */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_70%_-10%,rgba(225,29,42,0.22),transparent_55%)]" />

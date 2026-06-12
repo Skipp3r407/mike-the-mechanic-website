@@ -31,21 +31,21 @@ export default function Navbar() {
           : "border-b border-transparent bg-gradient-to-b from-ink-900/80 to-transparent"
       }`}
     >
-      <nav className="container-px flex h-20 items-center justify-between sm:h-24">
+      <nav className="container-px flex h-[140px] items-center justify-between sm:h-[164px]">
         <a
           href="#top"
           aria-label="Mike The Mechanic - back to top"
           className="flex items-center"
         >
-          <Logo priority className="h-[60px] sm:h-[72px]" />
+          <Logo priority className="h-[109px] sm:h-[132px]" />
         </a>
 
-        <ul className="hidden items-center gap-8 lg:flex">
+        <ul className="hidden items-center gap-6 xl:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="group relative text-sm font-semibold uppercase tracking-wider text-steel-light transition-colors hover:text-white"
+                className="group relative whitespace-nowrap text-sm font-semibold uppercase tracking-wide text-steel-light transition-colors hover:text-white"
               >
                 {link.label}
                 <span className="absolute -bottom-1.5 left-0 h-0.5 w-0 bg-brand transition-all duration-300 group-hover:w-full" />
@@ -54,17 +54,17 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-3 xl:flex">
           <a
             href={site.phoneHref}
-            className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm font-semibold text-white transition-colors hover:border-white/40"
+            className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-white/15 px-4 py-2 text-sm font-semibold text-white transition-colors hover:border-white/40"
           >
             <Phone className="h-4 w-4 text-brand" />
             {site.phone}
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-white shadow-glow transition-transform hover:-translate-y-0.5 hover:bg-brand-light"
+            className="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-brand px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-white shadow-glow transition-transform hover:-translate-y-0.5 hover:bg-brand-light"
           >
             <Wrench className="h-4 w-4" />
             Request Service
@@ -76,7 +76,7 @@ export default function Navbar() {
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-white/15 text-white lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-white/15 text-white xl:hidden"
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
@@ -84,18 +84,18 @@ export default function Navbar() {
 
       {/* Mobile drawer */}
       <div
-        className={`lg:hidden ${
+        className={`xl:hidden ${
           open ? "pointer-events-auto" : "pointer-events-none"
         }`}
       >
         <div
-          className={`fixed inset-0 top-20 bg-ink-900/95 backdrop-blur-sm transition-opacity duration-300 ${
+          className={`fixed inset-0 top-[140px] bg-ink-900/95 backdrop-blur-sm transition-opacity duration-300 sm:top-[164px] ${
             open ? "opacity-100" : "opacity-0"
           }`}
           onClick={() => setOpen(false)}
         />
         <div
-          className={`fixed inset-x-0 top-20 origin-top border-b border-white/10 bg-ink-800 px-5 pb-8 pt-4 shadow-2xl transition-all duration-300 ${
+          className={`fixed inset-x-0 top-[140px] origin-top border-b border-white/10 bg-ink-800 px-5 pb-8 pt-4 shadow-2xl transition-all duration-300 sm:top-[164px] ${
             open
               ? "translate-y-0 opacity-100"
               : "-translate-y-4 opacity-0"
