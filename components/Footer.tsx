@@ -1,5 +1,7 @@
+import Image from "next/image";
 import { Phone, Mail, MapPin, Facebook } from "lucide-react";
 import Logo from "./Logo";
+import elevateLogo from "@/public/elevate-logo.png";
 import { navLinks, site } from "@/lib/site";
 
 export default function Footer() {
@@ -84,18 +86,34 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="mt-8 border-t border-white/10 pt-6">
-          <p className="text-center text-xs text-steel/70">
-            Website Designed &amp; Maintained by{" "}
-            <a
-              href="https://www.elevatedigitalstudios.net"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-steel/80 transition-colors hover:text-brand"
-            >
-              Elevate Digital Studios
-            </a>
+        <div className="mt-8 flex flex-col items-center border-t border-white/10 pt-8">
+          <p className="text-xs font-medium uppercase tracking-[0.25em] text-steel/70">
+            Website Designed By
           </p>
+          <a
+            href="https://www.elevatedigitalstudios.net"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group mt-3 flex items-center gap-3"
+          >
+            <Image
+              src={elevateLogo}
+              alt="Elevate Digital Studios"
+              sizes="44px"
+              className="h-11 w-11 select-none"
+            />
+            <span className="font-display text-lg font-bold tracking-wide text-white transition-colors group-hover:text-brand">
+              Elevate Digital Studios
+            </span>
+          </a>
+          <a
+            href="https://www.elevatedigitalstudios.net"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 text-xs text-steel/70 transition-colors hover:text-brand"
+          >
+            www.elevatedigitalstudios.net
+          </a>
         </div>
       </div>
     </footer>
