@@ -35,7 +35,7 @@ export default function Navbar() {
         <a
           href="#top"
           aria-label="Mike The Mechanic - back to top"
-          className="flex items-center"
+          className="-ml-3 flex items-center sm:-ml-5 xl:mr-10"
         >
           <Logo priority className="h-[109px] sm:h-[132px]" />
         </a>
